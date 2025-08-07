@@ -6,16 +6,13 @@
  * @package verve-assignment
  */
 
+get_header();
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>verve-assignment</title>
-</head>
-<body>
-    
-</body>
-</html>
+ <div class="animate__animated animate__fadeInUp" data-aos="zoom-in">
+  <h2>My Services</h2>
+</div>
+  
+
+<?php 
+get_footer();
