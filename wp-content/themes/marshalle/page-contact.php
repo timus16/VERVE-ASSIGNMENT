@@ -1,32 +1,15 @@
+
 <?php
 /*
-Template Name: Contact Page
+Template Name: Home Page
 */
 get_header();
 ?>
-<div class="contact-page">
-    <h1>Contact Us</h1>
-    <form method="post" action="">
-        <p><label for="name">Name:</label><br>
-        <input type="text" name="name" id="name" required></p>
-        <p><label for="email">Email:</label><br>
-        <input type="email" name="email" id="email" required></p>
-        <p><label for="message">Message:</label><br>
-        <textarea name="message" id="message" required></textarea></p>
-        <p><input type="submit" value="Send"></p>
-    </form>
-    <?php
-    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        $name = sanitize_text_field($_POST['name']);
-        $email = sanitize_email($_POST['email']);
-        $message = esc_textarea($_POST['message']);
-        $to = get_option('admin_email');
-        $subject = 'Contact Form Submission';
-        $headers = 'From: ' . $name . ' <' . $email . '>';
-        wp_mail($to, $subject, $message, $headers);
-        echo '<p>Thank you for contacting us!</p>';
-    }
-    ?>
-</div>
-<?php
-get_footer();
+<main class="container mx-auto px-4 py-12">
+    <section class="text-center">
+        <h1 class="text-4xl font-bold mb-4">Welcome to Our Website</h1>
+        <p class="text-lg mb-8">This is your new homepage. Customize this content as you like!</p>
+        <a href="/" class="btn btn-primary">Learn More</a>
+    </section>
+</main>
+<?php get_footer(); ?>
